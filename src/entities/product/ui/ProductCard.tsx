@@ -24,6 +24,8 @@ export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
   const dispatch = useDispatch();
   const favorites = useSelector((state: RootState) => state.favorites.items);
 
+  const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
+
   const isFavorite = favorites.some((fav) => fav.id === product.id);
 
   const handleAddtoCart = () => {
@@ -53,13 +55,14 @@ export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
           <button onClick={handleFilterByCategory} className="category-button">
             {product.category}
           </button>
-          <button
-            onClick={handleAddtoFavorites}
-            disabled={isFavorite}
-            className={`favorite-button ${isFavorite ? "disabled" : ""}`}
-          >
-            ❤️
-          </button>
+          {isAuthenticated &&
+            <button
+              onClick={handleAddtoFavorites}
+              disabled={isFavorite}
+              className={`favorite-button ${isFavorite ? "disabled" : ""}`}
+            >
+              ❤️
+            </button>}
         </div>
         <h3 className="tooltip">
           <span className="tooltip-text">{product.title}</span>
