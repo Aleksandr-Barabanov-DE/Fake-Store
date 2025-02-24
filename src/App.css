@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #2d1138;
+  --primary-color-dark: #5d1c77;
+  --text-color: #1d1d1f;
+  --background-color: #ffffff;
+  --button-padding: 10px 15px;
+  --button-border-radius: 8px;
+  --gap-size: 16px;
+  --container-padding: 20px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+button:hover {
+  background: var(--primary-color-dark);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+  padding: var(--container-padding);
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  min-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #3498db;
+  --primary-color-dark: #2980b9;
+  --background-color: white;
+  --text-color: #333;
+  --secondary-text-color: #777;
+  --tooltip-bg-color: rgba(0, 0, 0, 0.8);
+  --box-shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0 8px 12px rgba(0, 0, 0, 0.2);
+  --card-padding: 20px;
+  --card-width: 250px;
+  --card-min-height: 550px;
+  --border-radius: 8px;
+  --button-padding: 10px;
+  --button-border-radius: 4px;
+  --transition-duration: 0.3s;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  padding: var(--card-padding);
+  width: var(--card-width);
+  min-height: var(--card-min-height);
+  margin: 15px;
+  text-align: center;
+  transition: transform var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease;
+}
+
+.clear-button,
+.remove-button,
+.add-to-cart-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color var(--transition-duration) ease;
+}
+
+.clear-button:hover,
+.remove-button:hover,
+.add-to-cart-button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.product-card .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  max-height: 300px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 10px 0;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  margin: 5px 0;
+}
+
+.product-card .inner-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: var(--tooltip-bg-color);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  bottom: 110%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity var(--transition-duration) ease;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+
+  &:hover {
+    color: #005bb5;
+  }
+}
+
+.img-container img {
+  max-height: 280px;
+}
