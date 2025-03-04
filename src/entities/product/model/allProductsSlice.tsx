@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { IProduct } from '../ui/ProductCard';
+import { RootState } from '../../../app/store';
+import { createSelector } from 'reselect';
 
 export const fetchProducts = createAsyncThunk('products/fetchAll', async () => {
   const response = await axios.get('https://fakestoreapi.com/products');
@@ -42,6 +44,13 @@ const productsSlice = createSlice({
       });
   },
 });
+
+export const selectFilteredProducts = createSelector(
+  (state: RootState) => state.products.items,
+  (state: RootState) => state.products.selectedCategory,
+  (items, selectedCategory) =>
+    selectedCategory ? items.filter((product) => product.category === selectedCategory) : items
+);
 
 export const { setCategory } = productsSlice.actions;
 export const productsReducer = productsSlice.reducer;

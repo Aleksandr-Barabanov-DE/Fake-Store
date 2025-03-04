@@ -1,11 +1,11 @@
 import { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCategories } from '../../entities/product/model/categoriesSlice';
-import { setCategory } from '../../entities/product/model/allProductsSlice';
-import { RootState, AppDispatch } from '../../app/store';
-import './CategoryFiltes.scss'
+import { fetchCategories } from '../../../entities/product/model/categoriesSlice';
+import { setCategory } from '../../../entities/product/model/allProductsSlice';
+import { RootState, AppDispatch } from '../../../app/store';
+import './CategoryFiltesButtons.scss'
 
-export const CategoryFilter: FC = () => {
+export const CategoryFilterButtons: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const categories = useSelector((state: RootState) => state.categories.items);
   const selectedCategory = useSelector((state: RootState) => state.products.selectedCategory);

@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../cart/model/cartSlice";
 import { addToFavorites } from "../../favorites/model/favoritesSlice";
-import { setCategory } from '../model/allProductsSlice';
-import './ProductCard.scss'
-import { RootState } from '../../../app/store';
+import { setCategory } from "../model/allProductsSlice";
+import "./ProductCard.scss";
+import { RootState } from "../../../app/store";
+import { FaHeart } from "react-icons/fa";
 
 export interface IProduct {
   id: number;
@@ -18,13 +19,16 @@ export interface IProduct {
     rate: number;
     count: number;
   };
+  quantity?: number;
 }
 
 export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
   const dispatch = useDispatch();
   const favorites = useSelector((state: RootState) => state.favorites.items);
 
-  const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector(
+    (state: RootState) => state.auth.isAuthenticated
+  );
 
   const isFavorite = favorites.some((fav) => fav.id === product.id);
 
@@ -46,23 +50,25 @@ export const ProductCard: FC<{ product: IProduct }> = ({ product }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-    >  <div className="img-container">
+    >
+      {" "}
+      <div className="img-container">
         <img src={product.image} alt={product.title} />
       </div>
-
       <div>
         <div className="inner-container">
           <button onClick={handleFilterByCategory} className="category-button">
             {product.category}
           </button>
-          {isAuthenticated &&
+          {isAuthenticated && (
             <button
               onClick={handleAddtoFavorites}
               disabled={isFavorite}
               className={`favorite-button ${isFavorite ? "disabled" : ""}`}
             >
-              ❤️
-            </button>}
+              <FaHeart size={20} color={isFavorite ? "gray" : "red"} />
+            </button>
+          )}
         </div>
         <h3 className="tooltip">
           <span className="tooltip-text">{product.title}</span>
