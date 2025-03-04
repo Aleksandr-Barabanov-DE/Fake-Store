@@ -1,9 +1,9 @@
-import { Loader } from '../../../shared/ui/Loader/Loader';
+import { Loader } from '@/shared/ui/Loader/Loader';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts, selectFilteredProducts } from '../../../entities/product/model/allProductsSlice';
-import { RootState, AppDispatch } from '../../../app/store';
-import { ProductCard } from '../../../entities/product/ui/ProductCard';
+import { fetchProducts, selectFilteredProducts } from '@/entities/product/model/allProductsSlice';
+import { RootState, AppDispatch } from '@/app/store';
+import { ProductCard } from '@/entities/product/ui/ProductCard';
 
 
 

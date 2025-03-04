@@ -1,8 +1,8 @@
 import { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCategories } from '../../../entities/product/model/categoriesSlice';
-import { setCategory } from '../../../entities/product/model/allProductsSlice';
-import { RootState, AppDispatch } from '../../../app/store';
+import { fetchCategories } from '@/entities/product/model/categoriesSlice';
+import { setCategory } from '@/entities/product/model/allProductsSlice';
+import { RootState, AppDispatch } from '@/app/store';
 import './CategoryFiltesButtons.scss'
 
 export const CategoryFilterButtons: FC = () => {

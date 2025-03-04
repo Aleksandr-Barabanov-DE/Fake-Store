@@ -3,8 +3,8 @@ import {
   removeFromFavorites,
 } from "../model/favoritesSlice";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../cart/model/cartSlice";
-import { IProduct } from "../../product/ui/ProductCard";
+import { addToCart } from "@/entities/cart/model/cartSlice";
+import { IProduct } from "@/entities/product/ui/ProductCard";
 
 interface FavoriteCardProps {
   item: IProduct;

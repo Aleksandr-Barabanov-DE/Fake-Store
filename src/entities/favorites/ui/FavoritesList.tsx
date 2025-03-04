@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../app/store";
+import { RootState } from "@/app/store";
 import {
   clearFavorites,
-} from "../../../entities/favorites/model/favoritesSlice";
+} from "@/entities/favorites/model/favoritesSlice";
 import { FavoriteCard } from "./FavoriteCard";
 
 export const FavoritesList: FC = () => {

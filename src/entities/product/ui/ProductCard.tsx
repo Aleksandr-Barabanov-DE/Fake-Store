@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../cart/model/cartSlice";
-import { addToFavorites } from "../../favorites/model/favoritesSlice";
+import { addToCart } from "@/entities/cart/model/cartSlice";
+import { addToFavorites } from "@/entities/favorites/model/favoritesSlice";
 import { setCategory } from "../model/allProductsSlice";
 import "./ProductCard.scss";
-import { RootState } from "../../../app/store";
+import { RootState } from "@/app/store";
 import { FaHeart } from "react-icons/fa";
 
 export interface IProduct {

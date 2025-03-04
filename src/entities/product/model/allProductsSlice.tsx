@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { IProduct } from '../ui/ProductCard';
-import { RootState } from '../../../app/store';
+import { RootState } from '@/app/store';
 import { createSelector } from 'reselect';
 
 export const fetchProducts = createAsyncThunk('products/fetchAll', async () => {

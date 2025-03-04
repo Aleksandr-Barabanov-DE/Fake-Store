@@ -1,4 +1,4 @@
-import { FavoritesList } from "../../entities/favorites/ui/FavoritesList";
+import { FavoritesList } from "@/entities/favorites/ui/FavoritesList";
 import { FC } from "react";
 
 export const Favorites: FC = () => {

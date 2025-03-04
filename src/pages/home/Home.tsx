@@ -1,5 +1,5 @@
-import { ProductList } from '../../entities/product/ui/ProductList';
-import { CategoryFilterButtons } from '../../features/categoryFilter/ui/CategoryFilterButtons';
+import { ProductList } from '@/entities/product/ui/ProductList';
+import { CategoryFilterButtons } from '@/features/categoryFilter/ui/CategoryFilterButtons';
 
 
 export const Home = () => {

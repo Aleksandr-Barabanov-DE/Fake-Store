@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IProduct } from "../../product/ui/ProductCard";
+import { IProduct } from "@/entities/product/ui/ProductCard";
 import { saveFavoritesToLocalStorage, loadFavoritesFromLocalStorage } from './favoritesLocalStorage';
 
 interface FavoritesState {

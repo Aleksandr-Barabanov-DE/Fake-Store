@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../app/store";
-import { clearCart } from "../../../entities/cart/model/cartSlice";
+import { RootState } from "@/app/store";
+import { clearCart } from "@/entities/cart/model/cartSlice";
 import { CartItem } from "./CartItem";
 
 export const CartList: FC = () => {

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { removeFromCart, increaseQuantity, decreaseQuantity } from "../../../entities/cart/model/cartSlice";
-import { IProduct } from "../../product/ui/ProductCard";
+import { removeFromCart, increaseQuantity, decreaseQuantity } from "@/entities/cart/model/cartSlice";
+import { IProduct } from "@/entities/product/ui/ProductCard";
 import { useDispatch } from "react-redux";
 
 

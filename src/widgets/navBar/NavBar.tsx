@@ -1,9 +1,9 @@
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../app/store";
+import { RootState } from "@/app/store";
 import { ShoppingCart } from "lucide-react";
-import logo from "../../shared/assets/logo.jpg";
-import { logout } from "../../features/auth/model/authSlice";
+import logo from "@/shared/assets/logo.jpg";
+import { logout } from "@/features/auth/model/authSlice";
 import { User, LogOut } from "lucide-react";
 import "./NavBar.scss";
 

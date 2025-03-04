@@ -1,4 +1,4 @@
-import { IProduct } from "../../product/ui/ProductCard";
+import { IProduct } from "@/entities/product/ui/ProductCard";
 
 export const saveFavoritesToLocalStorage = (favorites: IProduct[]) => {
   try {
