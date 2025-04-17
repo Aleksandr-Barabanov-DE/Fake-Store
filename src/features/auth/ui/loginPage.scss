@@ -1,5 +1,73 @@
-.login-container {
+/* authPage.scss */
+.loginPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+}
+
+.authContainer {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tabs button:hover {
+  background-color:var(--primary-color);
+}
+
+.tabs button.active {
+  background-color: var(--primary-color-dark);
+  color: #fff;
+}
+
+.tabs button.active:hover {
+  background-color:var(--primary-color);
+}
+
+.form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+}
+
+.form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  padding: 10px;
+  background-color:  var(--primary-color-dark);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color:var(--primary-color);
 }

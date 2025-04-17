@@ -1,13 +1,14 @@
-import { NavLink, Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { FC } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/store";
+import { NavLink, Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import logo from "@/shared/assets/logo.jpg";
 import { logout } from "@/features/auth/model/authSlice";
 import { User, LogOut } from "lucide-react";
-import "./NavBar.scss";
+import './NavBar.scss';
 
-export const Navbar = () => {
+export const Navbar: FC = () => {
   const dispatch = useDispatch();
   const cartCount = useSelector((state: RootState) =>
     state.cart.items.reduce((sum, item) => sum + item.quantity, 0)
@@ -26,13 +27,11 @@ export const Navbar = () => {
       </Link>
       <div className="inner-wrapper">
         <NavLink to="/">Home</NavLink>
-        {isAuthenticated &&
-          <>
-            <NavLink to="/favorites">Favorites</NavLink>
-            <NavLink to="/cart" className="cart-link">
-              <ShoppingCart size={25} />
-              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-            </NavLink></>}
+        <NavLink to="/favorites">Favorites</NavLink>
+        <NavLink to="/cart" className="cart-link">
+          <ShoppingCart size={25} />
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+        </NavLink>
         {!isAuthenticated ? (
           <NavLink to="/login">Login</NavLink>
         ) : (

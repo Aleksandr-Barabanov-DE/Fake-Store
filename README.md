@@ -5,9 +5,6 @@ A modern e-commerce website built with React, Redux, TypeScript, and Vite. The w
 ## **Features**
 
 - **Authentication**: Users can register, log in, and log out.
-  - For testing purposes, you can use the following credentials:
-    - **Username**: `Client66`
-    - **Password**: `pas45sword!23`
 - **Cart Management**: Users can add, remove, and view items in the cart, with real-time updates to the cart count.
 - **Favorites**: Users can mark items as favorites for later viewing.
 - **User Profile**: A personalized experience where users can view their account information and log out.

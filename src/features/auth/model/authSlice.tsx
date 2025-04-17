@@ -17,14 +17,10 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     login(state, action: PayloadAction<{ username: string; password: string }>) {
-      const { username, password } = action.payload;
-      if (username === 'Client66' && password === 'pas45sword!23') {
-        state.isAuthenticated = true;
-        state.user = { username };
-        localStorage.setItem('user', JSON.stringify({ username }));
-      } else {
-        alert('Invalid user name or password');
-      }
+      const { username } = action.payload;
+      state.isAuthenticated = true;
+      state.user = { username };
+      localStorage.setItem('user', JSON.stringify({ username }));
     },
     logout(state) {
       state.isAuthenticated = false;
