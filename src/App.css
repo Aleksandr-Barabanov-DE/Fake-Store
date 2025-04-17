@@ -1,6 +1,7 @@
 :root {
   --primary-color: #2d1138;
   --primary-color-dark: #5d1c77;
+  --active-color:  chocolate;
   --text-color: #1d1d1f;
   --background-color: #ffffff;
   --button-padding: 10px 15px;

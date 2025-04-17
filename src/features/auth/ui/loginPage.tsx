@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { login } from '../model/authSlice';
 import { useNavigate } from 'react-router-dom';
 import './loginPage.scss';
+import Swal from 'sweetalert2';
 
 const LoginPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'login' | 'register'>('login');
@@ -14,9 +15,24 @@ const LoginPage: React.FC = () => {
   const handleSubmit = () => {
     if (username && password) {
       dispatch(login({ username, password }));
-      navigate('/');
+  
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: activeTab === 'login' ? 'Logged in successfully' : 'Registered successfully',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+  
+      setTimeout(() => {
+        navigate('/');
+      }, 1500); 
     } else {
-      alert('Please fill in all fields');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please fill in all fields',
+      });
     }
   };
 

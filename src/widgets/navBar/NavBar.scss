@@ -39,12 +39,14 @@
 }
 
 .nav a:hover {
-  color: var(--primary-color);
+  color: var(--active-color);
+
 }
 
 .nav a:focus,
 .nav a:active {
   outline: none;
+  color: var(--active-color);
 }
 
 .nav a img {

@@ -29,6 +29,8 @@ A modern e-commerce website built with React, Redux, TypeScript, and Vite. The w
 - **Local Storage**: For storing cart and favorite items, ensuring persistence even after page refreshes.
 - **Lucide Icons**: For scalable, customizable icons in the UI.
 - **SCSS**: For styling the components and managing CSS.
+- **GSAP**: For animations.
+- **Sweetalert2**: For notifications.
 
 ## **Getting Started**
 
