@@ -58,7 +58,7 @@ To get the project up and running locally, follow these steps:
    npm run dev
    ```
 
-5. Go to [http://localhost:3000](http://localhost:3000) to view the app in action.
+5. Go to [http://localhost:5173](http://localhost:5173) to view the app in action.
 
 ## Planned Improvements
 
